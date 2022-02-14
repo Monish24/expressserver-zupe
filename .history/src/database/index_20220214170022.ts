@@ -123,14 +123,6 @@ export async function getArtistLibSongs(uid:string,art_id:string) {
     return libraryalbums
 }
 
-export async function getAlbumLibSongs(uid:string,albm_id:string) {
-  const repo = connection.getRepository(userlibrary)
-
-  const libraryalbums = await repo.query(`SELECT song_id FROM userlibrary WHERE uid = ? and album_id = ?`, [uid,albm_id]) as userlibrary[]
-    console.log(libraryalbums)
-    return libraryalbums
-}
-
 
 
 

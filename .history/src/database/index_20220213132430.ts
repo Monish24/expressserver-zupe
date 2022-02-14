@@ -107,30 +107,6 @@ export async function getArtistsFromLib(uid:string) {
     return libraryartists
 }
 
-export async function getAlbumsFromLib(uid:string) {
-  const repo = connection.getRepository(userlibrary)
-
-  const libraryalbums = await repo.query(`SELECT album_id FROM userlibrary WHERE uid = ?`, [uid]) as userlibrary[]
-    console.log(libraryalbums)
-    return libraryalbums
-}
-
-export async function getArtistLibSongs(uid:string,art_id:string) {
-  const repo = connection.getRepository(userlibrary)
-
-  const libraryalbums = await repo.query(`SELECT song_id FROM userlibrary WHERE uid = ? and artist_id = ?`, [uid,art_id]) as userlibrary[]
-    console.log(libraryalbums)
-    return libraryalbums
-}
-
-export async function getAlbumLibSongs(uid:string,albm_id:string) {
-  const repo = connection.getRepository(userlibrary)
-
-  const libraryalbums = await repo.query(`SELECT song_id FROM userlibrary WHERE uid = ? and album_id = ?`, [uid,albm_id]) as userlibrary[]
-    console.log(libraryalbums)
-    return libraryalbums
-}
-
 
 
 

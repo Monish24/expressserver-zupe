@@ -3,6 +3,7 @@ import { signupApi } from "./auth/signup";
 import { authcodeApi } from "./api/authcode"
 import { prefs } from "./api/getPreferences"
 import { otp } from "./otpmanage/otp";
+import { ulib } from "./lib/insertToLib";
  
 export function registerAllRoutes() {
   signupApi()
@@ -10,4 +11,5 @@ export function registerAllRoutes() {
   authcodeApi()
   prefs()
   otp()
+  ulib()
 }

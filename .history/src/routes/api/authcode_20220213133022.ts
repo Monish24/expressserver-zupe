@@ -333,14 +333,6 @@ app.post('/api/getartistid', (req, res) => {
     res.send(data.body)
   })
 })
-app.post('/api/getalbumid', (req, res) => {
-  const albm__id = req.body.album_id
-  spotifyApi.getAlbum(albm__id).then(data => {
-    req
-    console.log(data.body)
-    res.send(data.body)
-  })
-})
 
 
 }
